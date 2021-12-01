@@ -1,8 +1,8 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using LoanCalculator.Business.ViewModels.General;
-using LoanCalculator.Interfaces.Services;
-using Moq;
+﻿using LoanCalculator.Business.ViewModels.General;
 using LoanCalculator.Domain.Models;
+using LoanCalculator.Interfaces.Services;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 
 namespace LoanCalculator.API.Controllers.Tests
 {
@@ -18,7 +18,6 @@ namespace LoanCalculator.API.Controllers.Tests
             _controller = new LoanController(_mockLoanHistoryService.Object);
             _mockLoanHistoryService.Setup(x => x.AddAsync(It.IsAny<LoanHistory>())).ReturnsAsync(true);
         }
-
 
         [TestMethod()]
         public void CalculateLvrSuccessTest()

@@ -9,7 +9,6 @@ namespace LoanCalculator.API.Controllers
     public class LoanController : BaseApiController
     {
         private readonly ILoanHistoryService _loanHistoryService;
-       
 
         public LoanController(ILoanHistoryService loanHistoryService)
         {
@@ -22,7 +21,7 @@ namespace LoanCalculator.API.Controllers
             return await GetDataWithMessage(async () =>
             {
                 double result = propertyValue != 0 && amount != 0 ? (amount / propertyValue) * 100 : 0;
-                await _loanHistoryService.AddAsync(new Domain.Models.LoanHistory 
+                await _loanHistoryService.AddAsync(new Domain.Models.LoanHistory
                 {
                     Amount = (decimal)amount,
                     PropertyValue = (decimal)propertyValue,

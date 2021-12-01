@@ -1,6 +1,6 @@
+using LoanCalculator.Domain.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using LoanCalculator.Domain.Models;
 
 namespace LoanCalculator.Domain
 {
@@ -11,7 +11,5 @@ namespace LoanCalculator.Domain
         }
 
         public DbSet<LoanHistory> LoanHistory { get; set; }
-
-
     }
 }

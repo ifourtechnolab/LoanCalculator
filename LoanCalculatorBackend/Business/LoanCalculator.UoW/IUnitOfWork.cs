@@ -5,9 +5,6 @@ namespace LoanCalculator.UoW
 {
     public interface IUnitOfWork : IDisposable
     {
-
         ILoanHistoryRepository LoanHistoryRepository { get; }
-
-
     }
 }

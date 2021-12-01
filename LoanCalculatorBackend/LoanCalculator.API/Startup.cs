@@ -26,7 +26,7 @@ namespace LoanCalculator.API
 
         public IConfiguration Configuration { get; }
 
-        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+        private readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -83,12 +83,12 @@ namespace LoanCalculator.API
 
         private static void RegisterServices(IServiceCollection services)
         {
-            services.AddScoped<ILoanHistoryService,LoanHistoryService>();
+            services.AddScoped<ILoanHistoryService, LoanHistoryService>();
         }
 
         private static void RegisterRepositories(IServiceCollection services)
         {
-            services.AddScoped<ILoanHistoryRepository,LoanHistoryRepository>();
+            services.AddScoped<ILoanHistoryRepository, LoanHistoryRepository>();
         }
 
         private static void RegisterSwagger(IServiceCollection services)

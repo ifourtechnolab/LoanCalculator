@@ -12,10 +12,9 @@ namespace LoanCalculator.UoW
         public UnitOfWork(LoanCalculatorContext context)
         {
             this.Context = context;
-            LoanHistoryRepository = new LoanHistoryRepository(Context); 
-
-
+            LoanHistoryRepository = new LoanHistoryRepository(Context);
         }
+
         public ILoanHistoryRepository LoanHistoryRepository { get; }
 
         private bool disposed;
